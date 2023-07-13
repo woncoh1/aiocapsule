@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "aiocapsule"
+  site-url: "https://woncoh1.github.io/aiocapsule"
+  description: "Simple wrapper for AIOHTTP client session, request and response"
+  repo-branch: main
+  repo-url: "https://github.com/woncoh1/aiocapsule"

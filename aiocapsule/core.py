@@ -9,16 +9,17 @@ import aiohttp
 __all__ = ['send_http_request']
 
 # %% ../nbs/core.ipynb 5
-async def send_http_request(method:str, # HTTP method: GET, POST, DELETE, PUT.
-                            url:str, # Request URL.
-                            headers:dict|None=None, # HTTP headers.
-                            params:dict|None=None, # a.
-                            data:dict|str|None=None, # b.
-                            json:dict|None=None, # c.
-                            proxy:str|None=None, # d.
-                            auth:aiohttp.BasicAuth|None=None, # e.
-                            text:bool=False, # Return string? If not, return dict.
-                            ) -> str|dict: # HTML string or JSON dict.
+async def send_http_request(
+    method:str, # HTTP method: GET, POST, DELETE, PUT
+    url:str, # Request URL
+    headers:dict|None=None, # HTTP headers
+    params:dict|None=None,
+    data:dict|str|None=None,
+    json:dict|None=None,
+    proxy:str|None=None,
+    auth:aiohttp.BasicAuth|None=None,
+    text:bool=False, # Return string? If not, return dict
+) -> str|dict: # HTML string or JSON dict
     "Asynchronously send a HTTP request with a new session and return the response."
     async with aiohttp.ClientSession(
         headers=headers,

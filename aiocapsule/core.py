@@ -6,10 +6,10 @@ from __future__ import annotations
 import aiohttp
 
 # %% auto 0
-__all__ = ['send_http_request']
+__all__ = ['request']
 
 # %% ../nbs/core.ipynb 5
-async def send_http_request(
+async def request(
     method:str, # HTTP method: GET, POST, DELETE, PUT
     url:str, # Request URL
     headers:dict|None=None, # HTTP headers
